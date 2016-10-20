@@ -1,6 +1,7 @@
 # Project Specific
 .idea
 main_window.py
+__pycache__
 
 # Windows image file caches
 Thumbs.db
