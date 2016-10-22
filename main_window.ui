@@ -86,7 +86,7 @@
      <string>Audio File with Beats</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="fileButton">
     <property name="geometry">
      <rect>
       <x>330</x>
