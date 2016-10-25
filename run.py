@@ -34,6 +34,9 @@ class MainWindow(QtGui.QMainWindow, main_window.Ui_MainWindow):
             beats_path = wav_path.replace('.wav', '.txt')
             lines = open(beats_path).read().splitlines()
             self.beat_times = np.asarray(lines, dtype=np.float)
+            self.beatTable.clear()
+            for i in range(self.beat_times.size):
+                self.beatTable.setItem(1, i, QtGui.QTableWidgetItem(str(self.beat_times[i])))
             self.rate, self.wav_data = scipy.io.wavfile.read(wav_path)
             pen = pyqtgraph.mkPen(color='b')
             t = np.arange(0, self.wav_data.size/self.rate, step=1/self.rate)
